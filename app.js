@@ -1,9 +1,11 @@
 new Vue ({
   el: '#vue-app',
   data: {
-    age: 20,
-    a: 0,
-    b: 0
+    available:false,
+    nearby:false,
+    // age: 20,
+    // a: 0,
+    // b: 0
     // name: 'Shaun',
     // job: 'Ninja',
     // website: 'http://www.thenetninja.co.uk',
@@ -39,11 +41,17 @@ new Vue ({
     // }
   },
   computed: {
-    addToA:function(){
-      return this.a + this.age;
-    },
-    addToB:function(){
-      return this.b + this.age;
+    // addToA:function(){
+    //   return this.a + this.age;
+    // },
+    // addToB:function(){
+    //   return this.b + this.age;
+    // }
+    compClasses:function(){
+      return{
+        available: this.available,
+        nearby: this.nearby
+      }
     }
   }
 });
